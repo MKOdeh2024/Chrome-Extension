@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leads Tracker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      input {
+        width: 50%;
+        padding: 10px;
+        border: 2px solid #6aa84f; /* Green border */
+        border-radius: 4px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      button {
+        background-color: #6aa84f; /* Green background */
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 10px 16px;
+        margin-right: 5px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #558e3d;
+      }
+
+      #buttons-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      a {
+        display: block;
+        margin-top: 15px;
+        color: #04852f;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #saved-urls {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="url-input" type="text" placeholder="Enter URL">
+    <div id="buttons-container">
+      <button id="save-url-btn">Save URL</button>
+      <button id="save-tab-btn">Save Tab</button>
+      <button id="delete-all-btn">Delete All</button>
+    </div>
+    <div id="saved-urls">
+      <h2>Saved URLs:</h2>
+      <ul id="saved-urls-list"></ul>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
